@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notconnected">Press the connect button below to receive Push Alerts from AndroindTO!</string>
+    <string name="connected">You are connected to receive alerts!</string>
+    <string name="app_name">AndroidTO Alerts</string>
+    <string name="connect_button">Connect Now</string>
+    <string name="disconnect_button">Disconnect</string>
+    <string name="connection_error">Error connecting! Please try again.</string>
+    <string name="new_alert">Alert from AndroidTO</string>
+</resources>

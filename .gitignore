@@ -1,0 +1,14 @@
+*/bin
+*/gen
+*.class
+Thumbs.db
+.DS_Store
+Desktop.ini
+*.debug
+*.jad
+*.jar
+*/.settings
+*/.preprocessed
+*/.locale_interfaces
+*/.classpath
+*/.project

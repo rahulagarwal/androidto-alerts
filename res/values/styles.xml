@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    
+    <style name="CustomProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/busy_progress</item>
+        <item name="android:minWidth">50dip</item>
+        <item name="android:maxWidth">50dip</item>
+        <item name="android:minHeight">50dip</item>
+        <item name="android:maxHeight">50dip</item>        
+    </style>
+
+</resources>

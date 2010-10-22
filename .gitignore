@@ -1,5 +1,5 @@
-*/bin
-*/gen
+bin
+gen
 *.class
 Thumbs.db
 .DS_Store
@@ -10,5 +10,5 @@ Desktop.ini
 */.settings
 */.preprocessed
 */.locale_interfaces
-*/.classpath
-*/.project
+.classpath
+.project

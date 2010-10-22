@@ -2,6 +2,8 @@
 
 This is an Android app that demonstrates the use of the Android Cloud to Device Messaging (C2DM) Framework. Its a simple alerting app that receives push alert notifications sent from a server and notifies the user. 
 
+An implementation of a server that pushes alerts to this app can be found [here](http://github.com/rahulagarwal/androidto-alertspusher).
+
 Details around the Android C2DM Framework can be found [here](http://code.google.com/android/c2dm/index.html).
 
 ## Device Compatibility

@@ -70,8 +70,8 @@ public class MainActivity extends Activity {
         		setContentView(R.layout.connected);
         	} else if (status == Constants.UNREGISTERED_STATUS) {
         		setContentView(R.layout.notconnected);
-        	} else {
-        		//TODO: handle error statuses
+        	} else if (status == Constants.ERROR_STATUS || status == Constants.AUTH_ERROR_STATUS) {
+        		findViewById(R.id.connection_error).setVisibility(View.VISIBLE);
         	}
         }
     };

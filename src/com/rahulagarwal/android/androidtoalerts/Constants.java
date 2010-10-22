@@ -13,8 +13,8 @@ public final class Constants {
 	public static final String UPDATE_UI_ACTION_ERROR 		= "com.rahulagarwal.android.androidtoalerts.UPDATE_UI_ERROR";
 	public static final String UPDATE_UI_ACTION				= "com.rahulagarwal.android.androidtoalerts.UPDATE_UI";
 	
-	public static final String REGISTER_PATH 		=  PUSH_SERVER_PATH + "androidpusher/register/";
-	public static final String UNREGISTER_PATH	 	= PUSH_SERVER_PATH + "androidpusher/unregister/";
+	public static final String REGISTER_PATH 		=  PUSH_SERVER_PATH + "alertspusher/register/";
+	public static final String UNREGISTER_PATH	 	= PUSH_SERVER_PATH + "alertspusher/unregister/";
 	
 	public static final String STATUS_EXTRA = "Status";
     public static final int REGISTERED_STATUS = 1;

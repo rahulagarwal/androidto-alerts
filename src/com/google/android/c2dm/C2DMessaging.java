@@ -34,7 +34,7 @@ public class C2DMessaging {
     public static final String REQUEST_REGISTRATION_INTENT = "com.google.android.c2dm.intent.REGISTER";
     public static final String LAST_REGISTRATION_CHANGE = "last_registration_change";
     public static final String BACKOFF = "backoff";
-    public static final String GSF_PACKAGE = "com.google.android.gsf"; //"com.rahulagarwal.android.androidtoalerts";
+    public static final String GSF_PACKAGE = "com.google.android.gsf";
                                               
     // package
     static final String PREFERENCE = "com.google.android.c2dm";

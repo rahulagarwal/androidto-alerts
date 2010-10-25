@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.android.c2dm.C2DMessaging;
 
@@ -24,7 +25,12 @@ public class MainActivity extends Activity {
         String pushRegistrationID = settings.getString("pushRegistrationID", null);
         if (pushRegistrationID != null) {
         	// Registered with C2DM
+        	String lastAlert = settings.getString(Constants.LAST_ALERT_MESSAGE, "null");
         	setContentView(R.layout.connected);
+        	if (lastAlert != null) {
+        		TextView view = (TextView)findViewById(R.id.last_alert);
+        		view.setText(lastAlert);
+        	}
         } else {
         	//Not Registered with C2DM
         	setContentView(R.layout.notconnected);
@@ -32,6 +38,14 @@ public class MainActivity extends Activity {
         registerReceiver(mUpdateUIErrorReceiver, new IntentFilter(Constants.UPDATE_UI_ACTION_ERROR));
         registerReceiver(mUpdateUIReceiver, new IntentFilter(Constants.UPDATE_UI_ACTION));
     }
+	
+	@Override
+    public void onDestroy() {
+        unregisterReceiver(mUpdateUIReceiver);
+        unregisterReceiver(mUpdateUIErrorReceiver);
+        super.onDestroy();
+    }
+
     
     public void connectToPush(View view) {
     	Log.d(Constants.LOG_TAG, "Connecting To Push");

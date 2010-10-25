@@ -3,16 +3,39 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
+>
+<TextView
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     android:text="@string/connected"
-    />
+    android:textSize="20sp"
+/>
+
+<TextView  
+	android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:text="@string/latest_alert"
+    android:textSize="30sp"
+/>
+
+<TextView
+    android:id="@+id/last_alert"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="30px"
+    android:textSize="40sp"
+/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    >
 <Button
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:text="@string/disconnect_button"
 	android:onClick="disconnectToPush"
 	/>
+</LinearLayout>
 </LinearLayout>

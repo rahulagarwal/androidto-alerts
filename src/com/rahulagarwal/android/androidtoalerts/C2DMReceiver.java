@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.media.AudioManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -46,12 +47,20 @@ public class C2DMReceiver extends C2DMBaseReceiver {
            String message = (String) extras.get("alert");
            Log.d(Constants.LOG_TAG, "NEW C2DM Alert! - " + message);
            if (message != null) {
-        	   Intent launchIntent = new Intent();
-        	   //TODO: Create launch intent for alert message
+        	   setLastAlert(context, message);
+        	   Intent launchIntent = new Intent(context, MainActivity.class);
         	   generateNotification(context, message, launchIntent);
            }
        }
    }
+
+    public void setLastAlert(Context context, String lastAlert) {
+        final SharedPreferences settings = getSharedPreferences(Constants.PREF_NAME, 0);
+        Editor editor = settings.edit();
+        editor.putString(Constants.LAST_ALERT_MESSAGE, lastAlert);
+        editor.commit();
+
+    }
 
     private void generateNotification(Context context, String title, Intent intent) {
        int icon = R.drawable.status_icon;

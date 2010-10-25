@@ -8,12 +8,14 @@
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
     android:text="@string/notconnected"
+    android:textSize="30sp"
     />
 <Button
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:text="@string/connect_button"
 	android:onClick="connectToPush"
+	android:padding="10px"
 	/>
 <ProgressBar android:id="@+id/progress_main"
        	style="@style/CustomProgressBar"
